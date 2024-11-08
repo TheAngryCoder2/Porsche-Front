@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Your Porsche</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/5ed7ecda58.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- JavaScript with defer to load after HTML -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div id="top-bar" class="bg-gray-100 fixed top-0 right-0 left-0 py-2 visible-bar">
+        <p class="text-center py-2 font-semibold">
+            0% APR available for qualified buyers.
+        </p>
+    </div>
+
+    <!-- Header -->
+    <header class="flex justify-between items-center px-10 py-6 mt-16">
+        <img src="ff6dcedd3b269c073e08089bc9564e77.png" alt="Porsche Logo" width="80" height="24" />
+        <button aria-label="Select Country">
+            <i class="fa-solid fa-globe"></i> <span class="font-bold">UK</span>
+        </button>
+    </header>
+
+    <main class="flex flex-col md:flex-row justify-between px-4 md:px-10 py-6">
+        <!-- Image Section-->
+        <section class="w-full md:w-3/4">
+            <div class="sticky top-24">
+                <!-- Exterior-->
+                <div class="h-100 bg-gray-200 flex items-center justify-center overflow-hidden mb-4">
+                    <img src="./911 Stealth Black.webp" alt="911 Carrera GTS in Stealth Black" 
+                    class="max-w-full h-auto transform scale-125" id="exterior-image">
+                </div>
+                <!-- Interior-->
+                <div class="h-96 bg-gray-200 flex items-center justify-center overflow-hidden mb-4">
+                    <img src="Leather Black.webp" alt="911 Carrera GTS Interior in Black Leather" 
+                    class="max-w-full h-auto" id="interior-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside class="w-full md:w-1/3 pl-0 md:pl-8 mt-6 md:mt-0 z-2">
+            <h1 class="text-5xl text-center font-bold mb-5">911 Carrera GTS</h1>
+            <h2 class="text-xl text-center font-light">Customize Your Car</h2>
+
+            <!-- Exterior Buttons -->
+            <div class="my-8" id="exterior-buttons">
+                <h3 class="font-semibold mb-2">Exterior Colour</h3>
+                <div class="flex space-x-4">
+                    <button class="btn-selected transition-transform duration-300 hover:scale-110">
+                        <img 
+                        src="1002ADarkGrey.webp" 
+                        alt="Stealth Black" 
+                        class="rounded-full w-12">
+                    </button>
+                    <button class="transition-transform duration-300 hover:scale-110">
+                        <img 
+                        src="light grey.jpg" 
+                        alt="Light Grey" 
+                        class="rounded-full w-12">
+                    </button>
+                    <button class="transition-transform duration-300 hover:scale-110">
+                        <img 
+                        src="lime yellow.webp" 
+                        alt="Lime Yellow" 
+                        class="rounded-full w-12">
+                    </button>
+                    <button class="transition-transform duration-300 hover:scale-110">
+                        <img 
+                        src="Mint Green Printed Solid.jpg" 
+                        alt="Mint Green" 
+                        class="rounded-full w-12">
+                    </button>
+                    <button class="transition-transform duration-300 hover:scale-110">
+                        <img 
+                        src="red.png" 
+                        alt="Red" 
+                        class="rounded-full w-12">
+                    </button>
+                    <button class="transition-transform duration-300 hover:scale-110">
+                        <img 
+                        src="Linoleum_MidnightBlue_4181-p.webp" 
+                        alt="Blue" 
+                        class="rounded-full w-12">
+                    </button>
+                </div>
+            </div>
+
+            <!-- Interior Buttons -->
+            <div class="my-8" id="interior-buttons">
+                <h3 class="font-semibold mb-2">Interior Colour</h3>
+                <div class="flex space-x-4">
+                    <button class="btn-selected transition-transform duration-300 hover:scale-110">
+                        <img 
+                        src="1002ADarkGrey.webp" 
+                        alt="Leather Black" 
+                        class="rounded-full w-12">
+                    </button>
+                    <button class="transition-transform duration-300 hover:scale-110">
+                        <img 
+                        src="burgundy.jpg" 
+                        alt="Leather Red" 
+                        class="rounded-full w-12">
+                    </button>
+                    <button class="transition-transform duration-300 hover:scale-110">
+                        <img 
+                        src="Linoleum_MidnightBlue_4181-p.webp" 
+                        alt="Leather Blue" 
+                        class="rounded-full w-12">
+                    </button>
+                </div>
+            </div>
+
+            <!-- Wheel Selection -->
+            <div class="mb-8" id="wheel-buttons">
+                <h3 class="font-semibold mb-2">Wheels</h3>
+                <button class="w-full py-4 mb-2 bg-gray-700 text-white hover:bg-gray-500
+                hover:text-white rounded-lg transition-colors duration-300">
+                Standard Wheels</button>
+                <button class="w-full py-4 mb-2 bg-gray-200 hover:bg-gray-400
+                hover:text-white rounded-lg transition-colors duration-300">
+                Performance Wheels (+£2,322)</button>
+            </div>
+
+            <!-- Rocket Booster Option-->
+            <div class="border p-4 mb-8 rounded-lg shadow">
+                <h3 class="font-semibold mb-2">Full Dual Rockets</h3>
+                <label class="flex items-center space-x-3">
+                    <input type="checkbox" id="rocket-booster"
+                    class="form-checkbox h-5 w-5 text-blue-600"/>
+                    <span>Add Dual Rockets for £12,340</span>
+                </label>
+            </div>
+
+            <!-- AI Upgrade -->
+            <div class="mb-8">
+                <h3 class="font-semibold mb-2">AI Performance Package</h3>
+                <button id="ai-package-button" class="w-full py-4 bg-gray-200
+                 hover:bg-gray-400 hover:text-white rounded-lg transition-colors duration-300">
+                AI Upgrade (+£6,232)</button>
+            </div>
+
+            <!-- Accessories Checkboxes -->
+            <div class="my-8">
+                <h3 class="font-semibold mb-2">Accessories</h3>
+                <div class="space-y-4">
+                    <label
+                    class="flex items-center justify-between py-4 px-4
+                    border rounded-lg shadow">
+                        <span>Center Console Trays</span>
+                        <span class="flex items-center space-x-2">
+                            <input type="checkbox"
+                            class="accessory-form-checkbox h-5 w-5" data-price="500"/>
+                            <span>£500</span>
+                        </span>
+                    </label>
+                    <label class="flex items-center justify-between 
+                    py-4 px-4 border rounded-lg shadow">
+                        <span>Sunshade</span>
+                        <span class="flex items-center space-x-2">
+                            <input 
+                            type="checkbox"
+                            class="accessory-form-checkbox h-5 w-5" data-price="205"/>
+                            <span>£205</span>
+                        </span>
+                    </label>
+                    <label 
+                    class="flex items-center justify-between py-4 px-4 border rounded-lg shadow">
+                        <span>All-Weather Interior Liners</span>
+                        <span class="flex items-center space-x-2">
+                            <input type="checkbox"
+                            class="accessory-form-checkbox h-5 w-5" data-price="450"/>
+                            <span>£450</span>
+                        </span>        
+                    </label>
+                </div>
+            </div>
+
+            <!-- Total Price Section -->
+            <div class="pt-4">
+                <h3 class="font-semibold text-lg">Total Price</h3>
+                <p id="total-price" class="text-2xl font-bold">£107,879</p>
+            </div>
+
+            <!-- Payment Breakdown -->
+            <div class="border-t pt-4 mt-6">
+                <h3 class="font-semibold text-lg">Estimated Payment Breakdown</h3>
+                <div class="mt-4">
+                    <p>
+                        Down Payment:
+                        <span id="down-payment" class="font-bold">£12,000</span>
+                    </p>
+                    <p>Loan Term: <span class="font-bold">60 Months</span></p>
+                    <p>Interest Rate: <span class="font-bold">3% APR</span></p>
+                    <p>Estimated Monthly Payment: 
+                        <span id="monthly-payment" class="font-bold text-2xl">
+                            £1,498.79
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
